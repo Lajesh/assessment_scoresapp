@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SportsApp.iml" filepath="$PROJECT_DIR$/.idea/modules/SportsApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SportsApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SportsApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/benchmark/SportsApp.benchmark.iml" filepath="$PROJECT_DIR$/.idea/modules/benchmark/SportsApp.benchmark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/SportsApp.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/SportsApp.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/SportsApp.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/SportsApp.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/SportsApp.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/SportsApp.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/SportsApp.features.iml" filepath="$PROJECT_DIR$/.idea/modules/features/SportsApp.features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/features/products/SportsApp.features.scores.iml" filepath="$PROJECT_DIR$/.idea/modules/features/products/SportsApp.features.scores.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/thirdpartys/SportsApp.thirdpartys.iml" filepath="$PROJECT_DIR$/.idea/modules/thirdpartys/SportsApp.thirdpartys.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/thirdpartys/analyticslib/SportsApp.thirdpartys.analyticslib.iml" filepath="$PROJECT_DIR$/.idea/modules/thirdpartys/analyticslib/SportsApp.thirdpartys.analyticslib.iml" />
+    </modules>
+  </component>
+</project>

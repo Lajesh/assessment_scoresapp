@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_details">Match Details</string>
+    <string name="title_app">Popular Matches</string>
+    <string name="action_plus">+</string>
+    <string name="action_minus">-</string>
+</resources>

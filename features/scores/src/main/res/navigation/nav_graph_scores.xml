@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scores_nav_graph"
+    app:startDestination="@id/productListFRagment">
+
+
+    <fragment
+        android:id="@+id/productListFRagment"
+        android:name="com.tarabut.scores.view.fragment.products.ScoresListingFragment"
+        android:label="@string/title_app"
+        tools:layout="@layout/fragment_score_listing">
+
+        <action
+            android:id="@+id/action_listing_to_details"
+            app:destination="@id/productDetailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.tarabut.scores.view.fragment.products.ScoresDetailsFragment"
+        android:label="@string/title_details"
+        tools:layout="@layout/fragment_score_details"/>
+
+</navigation>

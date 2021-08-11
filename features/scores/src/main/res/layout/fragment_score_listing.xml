@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:swiperefresh="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tarabut.scores.view.fragment.products.ScoresListingViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="@{viewModel.loadingEvent.booleanValue() ? View.VISIBLE : View.GONE}"
+            shimmer:duration="800">
+
+            <!-- Adding 7 rows of placeholders -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/item_layout_placeholder" />
+
+                <include layout="@layout/item_layout_placeholder" />
+
+                <include layout="@layout/item_layout_placeholder" />
+
+                <include layout="@layout/item_layout_placeholder" />
+
+                <include layout="@layout/item_layout_placeholder" />
+
+                <include layout="@layout/item_layout_placeholder" />
+
+                <include layout="@layout/item_layout_placeholder" />
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/pull_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            swiperefresh:keep_refresh_head="true"
+            swiperefresh:refresh_mode="pull_mode"
+            refreshing="@{viewModel.loadingEvent.booleanValue() &amp;&amp; viewModel.swipeRefresh}"
+            swiperefresh:time_out_refresh_complete="300"
+            swiperefresh:time_out_return_to_top="300">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/offers_listing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:itemBinding="@{viewModel.itemBinding}"
+                app:items="@{viewModel.scoresList}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
